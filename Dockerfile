@@ -3,4 +3,5 @@ RUN apt update
 RUN apt install apache2 -y
 COPY ./index.html /var/www/html/
 COPY ./images/ /var/www/html/
-ENTRYPOINT ["apachectl", "-D", "FOEGROUND"]
+EXPOSE 80
+ENTRYPOINT ["apachectl", "-D", "FOREGROUND"]
